@@ -10,8 +10,8 @@ public:
     std::vector<Shelf> Shelves;
 
     Warehouse();
-    Warehouse addEmployee(Employee employee);
-    Warehouse addShelf(Shelf shelf);
-    Warehouse rearrangeShelf(Shelf& shelf);
-    Warehouse pickItems(std::string itemName, int itemCount);
+    void addEmployee(Employee employee);
+    void addShelf(Shelf shelf);
+    bool rearrangeShelf(Shelf& shelf);
+    bool pickItems(std::string itemName, int itemCount);
 };

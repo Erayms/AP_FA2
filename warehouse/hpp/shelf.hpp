@@ -7,5 +7,5 @@ class Shelf
 public:
     std::array<Pallet, 4> pallets;
     Shelf();
-    Shelf swapPallet(int slot, int slot2);
+    bool swapPallet(int slot, int slot2);
 };

@@ -9,9 +9,9 @@ public:
     bool forkliftCertificate;
 
     Employee(std::string name, bool forkliftCertificate);
-    Employee getName();
-    Employee getBusy();
-    Employee setBusy(bool busy);
-    Employee egtForkliftCertificate();
-    Employee setForkliftCertificate(bool forkliftcertificate);
+    std::string getName();
+    bool getBusy();
+    void setBusy(bool busy);
+    bool getForkliftCertificate();
+    void setForkliftCertificate(bool forkliftcertificate);
 };
