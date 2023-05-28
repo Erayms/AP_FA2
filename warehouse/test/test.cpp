@@ -92,7 +92,12 @@ TEST_CASE("Pick items", "Warehouse::pickItems"){
     // Test incorrecte naam van item.
     REQUIRE(warehouse.pickItems("Pencils", 101) == false);
 
-    warehouse.pickItems("Books", 100);
-    // Test 100 items uit voorraad gehaald, niet genoeg voorraad meer voor succes.
-    REQUIRE(warehouse.pickItems("Books", 10) == false);
+    // Test boeken bijvoegen.
+    for (int i = 0; i < 35; i++){
+        warehouse.shelves[0].pallets[0].putOne();
+    }
+
+    // Boeken bijgevoegd dus nu kan 130 boeken gepicked worden.
+    REQUIRE(warehouse.pickItems("Books", 130) == true);
+
 }
