@@ -27,7 +27,7 @@ bool Warehouse::rearrangeShelf(Shelf& shelf)
 
     if (!employeeAvailable)
     {   
-        return false; // No employee with a forklift certificate available
+        return false;
     }
 
     bool swapped = false;
