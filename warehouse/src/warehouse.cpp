@@ -56,9 +56,8 @@ bool Warehouse::pickItems(std::string itemName, int itemCount) {
         for (Pallet pallet : shelf.pallets) {
             if (pallet.getItemname() == itemName && pallet.getItemCount() > 0)
             {   
-                std::cout << pallet.getItemname() << std::endl;
-                std::cout << pallet.getItemCount() << std::endl;
-                for (int i = 0; i < pallet.getItemCount(); i++)
+                int amount = pallet.getItemCount();
+                for (int i = 0; i < amount; i++)
                 {
                     pallet.takeOne();
                     x -= 1;

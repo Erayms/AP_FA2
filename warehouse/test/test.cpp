@@ -76,22 +76,23 @@ Warehouse createMockWarehouse(){
 //           Warehouse::pickItems test cases            //
 ///////////////////////////////////////////////////////////////
 
-TEST_CASE("Pick items", "Warehouse::rearrangeShelf"){
+TEST_CASE("Pick items", "Warehouse::pickItems"){
     // Construct empty warehouse and add empty shelf and forklift certified Employee.
     Warehouse warehouse = createMockWarehouse();
 
-    // Test wel genoeg boeken.
+    // Test wel genoeg boeken op voorraad.
     REQUIRE(warehouse.pickItems("Books", 99) == true);
 
-    // Test niet genoeg boeken.
+    // Test precies genoeg boeken op voorraad.
+    REQUIRE(warehouse.pickItems("Books", 100) == true);
+
+    // Test niet genoeg boeken op voorraad.
     REQUIRE(warehouse.pickItems("Books", 101) == false);
 
     // Test incorrecte naam van item.
     REQUIRE(warehouse.pickItems("Pencils", 101) == false);
 
-
     warehouse.pickItems("Books", 100);
     // Test 100 items uit voorraad gehaald, niet genoeg voorraad meer voor succes.
     REQUIRE(warehouse.pickItems("Books", 10) == false);
-
 }

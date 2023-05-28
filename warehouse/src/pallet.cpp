@@ -32,11 +32,8 @@ bool Pallet::reallocateEmptyPallet(std::string itemName, int itemCapacity)
 
 bool Pallet::takeOne()
 {   
-    if (itemCount > 0) {
     itemCount -= 1;
     return true;
-    }
-    return false;
 }
 
 bool Pallet::putOne()
