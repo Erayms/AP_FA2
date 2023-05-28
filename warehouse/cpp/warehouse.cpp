@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
-#include "../hpp/warehouse.hpp"
-#include "../hpp/employee.hpp"
-#include "../hpp/pallet.hpp"
+#include "../warehouse/src/include/warehouse.hpp"
+#include "../warehouse/src/include/employee.hpp"
+#include "../warehouse/src/include/pallet.hpp"
 
 Warehouse::Warehouse(){
 };

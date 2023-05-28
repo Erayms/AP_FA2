@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#include "../hpp/shelf.hpp"
-#include "../hpp/employee.hpp"
+#include "../warehouse/src/include/shelf.hpp"
+#include "../warehouse/src/include/employee.hpp"
 
 class Warehouse
 {

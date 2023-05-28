@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "../hpp/employee.hpp"
+#include "../warehouse/src/include/employee.hpp"
 
 Employee::Employee(std::string name, bool forkliftCertificate): name(name), forkliftCertificate(forkliftCertificate){
 }

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "../hpp/pallet.hpp"
+#include "../warehouse/src/include/pallet.hpp"
 
 Pallet::Pallet(std::string itemName, int itemCapacity, int itemCount): itemName(itemName), itemCapacity(itemCapacity), itemCount(itemCount) {
 }

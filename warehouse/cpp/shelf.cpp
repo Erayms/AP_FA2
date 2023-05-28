@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <array>
-#include "../hpp/shelf.hpp"
+#include "../warehouse/src/include/shelf.hpp"
 
 bool Shelf::swapPallet(int slot, int slot2)
 {   

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <array>
-#include "../hpp/pallet.hpp"
+#include "../warehouse/src/include/pallet.hpp"
 
 class Shelf
 {
