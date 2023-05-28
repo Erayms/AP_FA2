@@ -1,6 +1,7 @@
 #include <iostream>
 #include <array>
-#include "../warehouse/src/include/pallet.hpp"
+#include "../include/pallet.hpp"
+#pragma once
 
 class Shelf
 {

@@ -1,13 +1,14 @@
 #include <iostream>
 #include <vector>
-#include "../warehouse/src/include/shelf.hpp"
-#include "../warehouse/src/include/employee.hpp"
+#include "../include/shelf.hpp"
+#include "../include/employee.hpp"
+#pragma once
 
 class Warehouse
 {
 public:
     std::vector<Employee> Employees;
-    std::vector<Shelf> Shelves;
+    std::vector<Shelf> shelves;
 
     Warehouse();
     void addEmployee(Employee employee);

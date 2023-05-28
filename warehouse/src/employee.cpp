@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "../warehouse/src/include/employee.hpp"
+#include "C:\Users\Eray\Desktop\AP_FA2\warehouse\src\include\employee.hpp"
 
 Employee::Employee(std::string name, bool forkliftCertificate): name(name), forkliftCertificate(forkliftCertificate){
 }
@@ -15,9 +15,11 @@ bool Employee::getBusy()
     return busy;
 }
 
-void Employee::setBusy(bool busy)
+// verandering gemaakt in UML staat busy, hier busy2 van gemaakt.
+// Anders word de boolean niet correct overgenomen.
+void Employee::setBusy(bool busy2)
 {
-    bool busy = busy;
+    busy = busy2;
 }
 
 bool Employee::getForkliftCertificate()
@@ -27,5 +29,5 @@ bool Employee::getForkliftCertificate()
 
 void Employee::setForkliftCertificate(bool forkliftcertificate)
 {
-    bool forkliftCertificate = forkliftcertificate;
+    forkliftCertificate = forkliftcertificate;
 }

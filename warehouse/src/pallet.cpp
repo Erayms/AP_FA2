@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
-#include "../warehouse/src/include/pallet.hpp"
+#include "C:\Users\Eray\Desktop\AP_FA2\warehouse\src\include\pallet.hpp"
 
 Pallet::Pallet(std::string itemName, int itemCapacity, int itemCount): itemName(itemName), itemCapacity(itemCapacity), itemCount(itemCount) {
 }
 
-Pallet::Pallet(){
+Pallet::Pallet(): itemName(""), itemCapacity(0), itemCount(0){
 }
 
 std::string Pallet::getItemname()
@@ -41,7 +41,8 @@ bool Pallet::takeOne()
 
 bool Pallet::putOne()
 {   
-    if (itemCount < itemCapacity) {
+    if (itemCount < itemCapacity) 
+    {
     itemCount += 1;
     return true;
     }
