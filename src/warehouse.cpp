@@ -16,6 +16,12 @@ void Warehouse::addShelf(Shelf shelf){
     shelves.push_back(shelf);
 }
 
+/**
+ * Rearranged de meegegeven shelf op oplopend itemcount.
+ *
+ * @param shelf: shelf pointer dat veranderd moet worden (Shelf&)
+ * @return bool (true of false)
+ */
 bool Warehouse::rearrangeShelf(Shelf& shelf) {
     for (Employee emp : Employees) {
         if (emp.forkliftCertificate && !emp.busy) {
@@ -42,7 +48,13 @@ bool Warehouse::rearrangeShelf(Shelf& shelf) {
     return false;
 }
 
-
+/** 
+ * Pakt het aantal (itemCount) van product (itemName) uit de warehouse als er genoeg items zijn.
+ * 
+ * @param itemname: naam van het item dat word gepickt (string)
+ * @param itemcount: aantal items dat gepicked moeten worden (int)
+ * @return bool (true of false)
+ */
 bool Warehouse::pickItems(string itemName, int itemCount) {
     if (countItems(itemName, itemCount) == true){
         for (Shelf& shelf : shelves) {
@@ -64,6 +76,14 @@ bool Warehouse::pickItems(string itemName, int itemCount) {
     return false;
 }
 
+/**
+ * Telt het aantal items (itemName) dat zich bevind in het gehele warehouse.
+ * Als het gelijk of groter is dan itemCount krijg je true anders false.
+ *
+ * @param itemname: naam van het item dat word geteld (string)
+ * @param itemcount: aantal items dat geteld moet worden (int)
+ * @return bool (true of false)
+ */
 bool Warehouse::countItems(string itemName, int itemcount){
     int total = 0;
     for (Shelf shelf : shelves) {
